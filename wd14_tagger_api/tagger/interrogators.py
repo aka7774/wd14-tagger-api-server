@@ -3,6 +3,14 @@ from typing import List, Dict
 from wd14_tagger_api.tagger.interrogator import Interrogator, WaifuDiffusionInterrogator, MLDanbooruInterrogator
 
 interrogators: Dict[str, Interrogator] = {
+    'wd-ViT-Large-v3': WaifuDiffusionInterrogator(
+        'WD ViT-Large-v3',
+		repo_id='SmilingWolf/wd-vit-large-tagger-v3',
+    ),
+    'wd-EVA02-Large-v3': WaifuDiffusionInterrogator(
+        'wd-EVA02-Large-v3',
+		repo_id='SmilingWolf/wd-eva02-large-tagger-v3',
+    ),
     'wd14-vit.v1': WaifuDiffusionInterrogator(
         'WD14 ViT v1',
         repo_id='SmilingWolf/wd-v1-4-vit-tagger'
@@ -24,10 +32,20 @@ interrogators: Dict[str, Interrogator] = {
         # the name is misleading, but it's v1
         repo_id='SmilingWolf/wd-v1-4-convnextv2-tagger-v2',
     ),
+    'wd14-convnextv2-v2': WaifuDiffusionInterrogator(
+         'wd14-convnextv2-v2',
+         repo_id='SmilingWolf/wd-v1-4-convnextv2-tagger-v2',
+         revision='v2.0'
+    ),
     'wd14-swinv2-v1': WaifuDiffusionInterrogator(
         'WD14 SwinV2 v1',
         # again misleading name
         repo_id='SmilingWolf/wd-v1-4-swinv2-tagger-v2',
+    ),
+    'wd14-swinv2-v2': WaifuDiffusionInterrogator(
+          'wd14-swinv2-v2',
+          repo_id='SmilingWolf/wd-v1-4-swinv2-tagger-v2',
+          revision='v2.0'
     ),
     'wd-v1-4-moat-tagger.v2': WaifuDiffusionInterrogator(
         'WD14 moat tagger v2',
